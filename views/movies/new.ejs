@@ -4,15 +4,23 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Show List</title>
+		<title>Movie List</title>
 	</head>
 	<body>
-		<h1>ADD SHOWS</h1>
-		<form action="/shows" method="POST">
+		<nav>
+			<ul>
+				<li>
+					<a href="/">Home</a>
+				</li>
+					<a href="/movies">Movies</a>
+			</ul>
+		</nav>
+		<h1>ADD MOVIES</h1>
+		<form action="/movies" method="POST">
 			Name: <input type="text" name="name" /><br />
 			Platform: <input type="text" name="platform" /><br />
             Notes: <input type="text" name="notes" /><br />
-			Completed: <input type="checkbox" name="completed" /><br />
+			Watched: <input type="checkbox" name="watched" /><br />
 			<input type="submit" name="" value="Add Show" />
 		</form>
 	</body>
