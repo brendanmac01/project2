@@ -22,6 +22,13 @@ app.use(express.urlencoded({ extended: false }));
 app.use(methodOverride('_method'));
 
 // INDUCES
+app.get('/', async (req, res) => {
+	const allShows = await Show.find({})
+    res.render('index.ejs', {
+        shows: allShows
+    }
+    );
+}); 
 // INDEX
 app.get('/shows', async (req, res) => {
 	const allShows = await Show.find({})
