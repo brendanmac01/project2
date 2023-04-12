@@ -16,7 +16,7 @@
 		</nav>
 		<h1>Movies index page</h1>
 		<ul>
-			<% movies.forEach(show => { %>
+			<% movies.forEach(movie => { %>
 				<li>
 				  <a href="/movies/<%=movie._id %>"> <%=movie.name %> </a>
 				  <form name='deletebutton' action="/movies/<%= movie.id %>?_method=DELETE" method="POST">
