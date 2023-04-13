@@ -1,12 +1,15 @@
+require('dotenv').config();
+
 const express = require("express");
 const mongoose = require("mongoose");
 const methodOverride = require("method-override");
-require('dotenv').config();
 const app = express();
 // const Show = require('./models/shows');
 const session = require('express-session');
 const bcrypt = require('bcrypt');
 const hashedString = bcrypt.hashSync('yourStringHere', bcrypt.genSaltSync(10));
+const db = mongoose.connection
+// const MONGODB_URI = process.env.MONGODB_URI;
 
 
 // const show = { watched: true };
@@ -16,7 +19,7 @@ const hashedString = bcrypt.hashSync('yourStringHere', bcrypt.genSaltSync(10));
 // MONGOOSE
 mongoose.connect(process.env.DATABASE_URL)
 
-const db = mongoose.connection
+
 db.on('error', (err) => console.log(err.message + ' is mongo not running?'));
 db.on('connected', () => console.log('mongo connected'));
 db.on('disconnected', () => console.log('mongo disconnected'));
@@ -25,6 +28,8 @@ db.on('disconnected', () => console.log('mongo disconnected'));
 
 app.use(express.urlencoded({ extended: false }));
 app.use(methodOverride('_method'));
+app.use(express.static('public'));
+
 // app.use(
 //     session({
 //         secret: process.env.SECRET,
