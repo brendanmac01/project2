@@ -10,7 +10,6 @@ const bcrypt = require('bcrypt');
 const hashedString = bcrypt.hashSync('yourStringHere', bcrypt.genSaltSync(10));
 // const MONGODB_URI = process.env.MONGODB_URI;
 
-
 // const show = { watched: true };
 // const watchedSymbol = show.watched ? '<i class="fas fa-check"></i>' : '<i class="fas fa-times"></i>';
 // console.log(watchedSymbol); // outputs '<i class="fas fa-check"></i>'
@@ -27,7 +26,7 @@ db.on('disconnected', () => console.log('mongo disconnected'));
 
 app.use(express.urlencoded({ extended: false }));
 app.use(methodOverride('_method'));
-app.use(express.static('public'));
+app.use('/public', express.static('public'));
 
 app.use(
     session({
@@ -42,6 +41,8 @@ const showsController = require('./controllers/shows.js');
 app.use('/shows', showsController)
 const moviesController = require('./controllers/movies.js');
 app.use('/movies', moviesController)
+// const userController = require('./controllers/users.js');
+// app.use('/users', userController)
 // Routes / Controllers
 // app.get('/hashed', (req, res) => {
 //     const hashedString = bcrypt.hashSync('example', bcrypt.genSaltSync(10));
@@ -79,8 +80,12 @@ app.use('/movies', moviesController)
 // INDUCES
 app.get('/', async (req, res) => {
 	// const allShows = await Show.find({})
-    res.render('home.ejs');
+    res.render('homepage.ejs');
 }); 
+
+app.get('/watchlist', async (req, res) => {
+    res.render('home.ejs');
+})
 // // INDEX
 // app.get('/shows', async (req, res) => {
 // 	const allShows = await Show.find({})

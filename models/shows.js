@@ -1,10 +1,10 @@
 const mongoose = require('mongoose');
 
 const showSchema = new mongoose.Schema({
-	name: { type: String, required: true },
-	platform: { type: String, required: true },
+	name: {type: String, required: true },
+	platform: {type: String, required: false },
     notes: {type: String, required: false},
-	watched: Boolean,
+	img: {type: String, required: false},
 });
 
 // showSchema.pre('save', function(next) {

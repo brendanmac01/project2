@@ -13,7 +13,7 @@ router.get('/', async (req, res) => {
 
 // New
 router.get('/new', (req, res) => {
-    res.render('../movies/new.ejs')
+    res.render('../views/movies/new.ejs')
 })
 
 // DELETE
