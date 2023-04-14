@@ -5,8 +5,8 @@ const mongoose = require("mongoose");
 const methodOverride = require("method-override");
 const app = express();
 const session = require('express-session');
-const bcrypt = require('bcrypt');
-const hashedString = bcrypt.hashSync('yourStringHere', bcrypt.genSaltSync(10));
+// const bcrypt = require('bcrypt');
+// const hashedString = bcrypt.hashSync('yourStringHere', bcrypt.genSaltSync(10));
 
 // const show = { watched: true };
 // const watchedSymbol = show.watched ? '<i class="fas fa-check"></i>' : '<i class="fas fa-times"></i>';

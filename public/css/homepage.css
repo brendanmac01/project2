@@ -55,19 +55,6 @@ a:hover {
 	font-size: 80px;
 	color: #f4d03f;
 }
-
-#description {
-	font-family: 'Bungee Hairline', cursive;
-	font-size: 40px;
-	color: #7b7d7d;
-}
-
-#description-loot {
-	font-family: 'Bungee Hairline', cursive;
-	font-size: 28px;
-	color: #7b7d7d;
-}
-
 nav {
 	display: flex;
 	justify-content: space-evenly;

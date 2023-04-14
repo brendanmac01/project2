@@ -2,6 +2,7 @@ h1 {
     color: blue;
     text-align: center;
 	font-weight: bold;
+	font-family: 'Chivo Mono', monospace;
 }
 p {
     color: blue;
