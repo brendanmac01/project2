@@ -9,16 +9,14 @@ Allow user to create a watchlist of Movies and TV shows.
 * Express
 * Mongoose
 * MongoDB
-* Bcrypt
 * Dotenv
 * Heroku
 * EJS
-* Express-session
 * Method-override
 
 **Screenshots**  
 
-![Application Image](./public/image.jpg) 
+![Application Image](./public/assets/readmepic.png) 
 
 **Getting started**  
 [Click Here](https://tvshowlookup.herokuapp.com/) to get started.
