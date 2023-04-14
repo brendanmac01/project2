@@ -13,6 +13,7 @@ Allow user to create a watchlist of Movies and TV shows.
 * Heroku
 * EJS
 * Method-override
+
 **Screenshots**  
 
 ![Application Image](./public/assets/readmepic.png) 
